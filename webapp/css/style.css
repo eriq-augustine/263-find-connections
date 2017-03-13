@@ -1,0 +1,166 @@
+/* Reset */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Actual CSS */
+
+.page {
+   height: 100%;
+   width: 100%;
+}
+
+.page .top {
+   height: 100px;
+   padding: 10px;
+
+   /* Stop the canvas from blocking the top out. */
+   position: relative;
+   z-index: 100;
+}
+
+.page .bottom {
+   height: 100%;
+}
+
+.title p {
+   text-align: center;
+   font-size: 36px;
+   margin-bottom: 20px;
+}
+
+.selection-area {
+   display: flex;
+   justify-content: space-around;
+   align-items: flex-end;
+
+   padding: 10px;
+}
+
+.selection-area > div {
+   flex: 1;
+   padding-left: 10px;
+   padding-right: 10px;
+}
+
+.selection-area div p {
+   font-size: 24px;
+   text-align: center;
+}
+
+.selection-area div p:nth-child(2) {
+   text-color: #9c9c9c;
+   font-size: 16px;
+}
+
+.selection-area .button-area {
+   display: flex;
+}
+
+.selection-area .button-area .num-connections-area {
+   flex: 1;
+   margin-right: 20px;
+}
+
+.source-area,
+.target-area {
+}
+
+#graph-area {
+   height: 100%;
+   width: 100%;
+}
+
+/* Edge Legand */
+.legend {
+}
+
+.edge-legend {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.edge-legend span {
+   margin-left: 10px;
+   margin-right: 10px;
+}
+
+.edge-legend-element {
+   height: 50px;
+   width: 100px;
+   box-shadow: 2px 3px 0px 0px #ccc;
+}
+
+.edge-color-weak {
+   background-color: #e82910;
+}
+
+.edge-color-med-weak {
+   background-color: #efec26;
+}
+
+.edge-color-med-strong {
+   background-color: #c8ed25;
+}
+
+.edge-color-strong {
+   background-color: #39e512;
+}
+
+.edge-color-outter {
+   background-color: #03b7b7;
+}
+
+.edge-legend-element-first {
+   border-radius: 5px 0 0 5px;
+}
+
+.edge-legend-element-last {
+   border-radius: 0 5px 5px 0;
+}
+
+.legend p {
+   text-align: center;
+   padding-top: 10px;
+}
