@@ -37,9 +37,9 @@ class GraphHandler(http.server.SimpleHTTPRequestHandler):
                 self.wfile.write(bytes('', "utf8"))
                 return
 
-            startId = int(match[1])
-            endId = int(match[2])
-            numPaths = int(match[3])
+            startId = int(match.group(1))
+            endId = int(match.group(2))
+            numPaths = int(match.group(3))
 
             self._getPaths(startId, endId, numPaths)
             return
